@@ -19,7 +19,16 @@ endif
 
 COMPILER_CALL = $(CXX) $(CXXFLAGS)
 
+# select all files with the .cc extension
+# to see all use echo $(CXX_SOURCES)
 CXX_SOURCES = $(wildcard *.cc)
+
+# List of all output .o files
+# CXX_OBJECTS = my_lin.o main.o
+# patsubst = pattern substitution:
+# - use all .cc/.cpp files
+# - generate .o files / exchange .cc/.cpp with .o
+# - use text of cxx_sources variable
 CXX_OBJECTS = $(patsubst %.cc, %.o, $(CXX_SOURCES))
 
 ###############
@@ -40,5 +49,7 @@ clean:
 ##############
 # $@: the file name of the target
 # $<: the name of the first dependency
+# file ending/type
 %.o: %.cc
+    # 				    %.o   %.cc
 	$(COMPILER_CALL) -c $< -o $@
