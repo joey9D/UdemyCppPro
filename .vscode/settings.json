@@ -12,6 +12,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.suggest.preview": true,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
     "debug.onTaskErrors": "debugAnyway",
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
@@ -38,7 +39,7 @@
         "*.md": "vscode.markdown.preview.editor",
         "*.svg": "svgPreviewer.customEditor"
     },
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Nanowise Dark",
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -214,5 +215,6 @@
     "C_Cpp_Runner.showCompilationTime": false,
     "C_Cpp_Runner.useLinkTimeOptimization": false,
     "C_Cpp_Runner.msvcSecureNoWarnings": false,
-    "C_Cpp_Runner.msvcBatchPath": ""
+    "C_Cpp_Runner.msvcBatchPath": "",
+    "makefile.configureOnOpen": true
 }
