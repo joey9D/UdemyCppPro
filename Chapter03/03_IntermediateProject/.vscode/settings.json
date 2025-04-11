@@ -121,6 +121,26 @@
       "editor.defaultFormatter": "cheshirekow.cmake-format"
     },
     "cmake.options.statusBarVisibility": "visible",
+    "cmake.options.advanced": {
+        "build": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "launch": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "debug": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "cpack": {
+            "statusBarVisibility": "hidden",
+        },
+        "workflow": {
+            "statusBarVisibility": "hidden"
+        }
+    },
     "doxdocgen.file.fileTemplate": "@file {name}",
     "doxdocgen.cpp.tparamTemplate": "@tparam {param} ",
     "doxdocgen.generic.briefTemplate": "@brief {text}",
