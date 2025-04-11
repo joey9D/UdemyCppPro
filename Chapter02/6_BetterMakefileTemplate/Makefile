@@ -15,6 +15,11 @@ else
 CXX_WARNINGS =
 endif
 
+# if enable, build process will be stopped/cancelled if there
+# are warnings.
+# Might be useful
+# - to solve one warning at a time
+# - one waring after the other
 ifeq ($(WARNINGS_AS_ERRORS), 1)
 CXX_WARNINGS += -Werror
 endif
@@ -44,6 +49,7 @@ CXX_OBJECTS = $(patsubst $(SOURCE_DIR)/%.cc, $(BUILD_DIR)/%.o, $(CXX_SOURCES))
 all: create build
 
 create:
+    # '@' suppresses the command from being printed in the terminal
 	@mkdir -p build
 
 build: $(CXX_OBJECTS)
@@ -67,4 +73,5 @@ $(BUILD_DIR)/%.o: $(SOURCE_DIR)/%.cc
 ###########
 ## PHONY ##
 ###########
+# list all targets that are not associated with files names
 .PHONY: all create build execute clean
