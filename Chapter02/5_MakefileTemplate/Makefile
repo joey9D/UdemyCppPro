@@ -11,6 +11,7 @@ CXX = g++
 CXX_STANDARD = c++17
 CXX_WARNINGS = -Wall -Wextra -Wpedantic
 CXXFLAGS = $(CXX_WARNINGS) -std=$(CXX_STANDARD)
+# give the compiler the location of the header files
 CPPFLAGS = -I $(INCLUDE_DIR)
 LDFLAGS =
 
@@ -23,6 +24,8 @@ endif
 COMPILER_CALL = $(CXX) $(CXXFLAGS) $(CPPFLAGS)
 
 CXX_SOURCES = $(wildcard $(SOURCE_DIR)/*.cc)
+# files are coming from src directory
+# save output files in build directory
 CXX_OBJECTS = $(patsubst $(SOURCE_DIR)/%.cc, $(BUILD_DIR)/%.o, $(CXX_SOURCES))
 
 ###############
