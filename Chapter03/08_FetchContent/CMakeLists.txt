@@ -10,14 +10,18 @@ set(LIBRARY_NAME Library)
 set(EXECUTABLE_NAME Executable)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+# internal cmake modules
 include(AddGitSubmodule)
 include(FetchContent)
 
 FetchContent_Declare(
-    nlohmann_json
+    nlohmann_json # this is the project name.
+    # check the projects main CMakeLists.txt for the
+    # project name.
     GIT_REPOSITORY https://github.com/nlohmann/json
     GIT_TAG v3.11.3
-    GIT_SHALLOW TRUE)
+    GIT_SHALLOW TRUE) # skip submodules within the repo
+# write the project name into the brackets
 FetchContent_MakeAvailable(nlohmann_json)
 
 FetchContent_Declare(
