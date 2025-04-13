@@ -142,6 +142,10 @@
             "statusBarVisibility": "hidden",
             "inheritDefault": "visible"
         },
+        "ctest": {
+            "statusBarVisibility": "hidden",
+            "inheritDefault": "icon"
+        },
     },
     "doxdocgen.file.fileTemplate": "@file {name}",
     "doxdocgen.cpp.tparamTemplate": "@tparam {param} ",
